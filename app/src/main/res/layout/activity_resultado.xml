@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#5B5B5B"
+    tools:context=".Resultado">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5B5B5B"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <ImageView
+            android:id="@+id/imgTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:scaleX="1.1"
+            app:srcCompat="@drawable/quiztransito_logo"/>
+
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#474747"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="--------------------------------Resultado final--------------------------------"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtAcertos"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:background="#323232"
+            android:gravity="center"
+            android:text="Acertos: "
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:orientation="horizontal">
+
+            <!-- Botão Responder Novamente -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnResponderNovamente"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#EBFFFFFF"
+                android:gravity="center"
+                android:text="Responder Novamente" />
+
+            <!-- Botão Sair -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSair"
+                android:layout_width="190dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#EBFFFFFF"
+                android:gravity="center"
+                android:onClick="Sair"
+                android:text="Sair"
+                android:textColor="#FF8080" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

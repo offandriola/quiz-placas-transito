@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5B5B5B"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <ImageView
+        android:id="@+id/imgTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:scaleX="1.1"
+        app:srcCompat="@drawable/quiztransito_logo" />
+
+    <!-- Imagem da Placa -->
+    <ImageView
+        android:id="@+id/imgPlaca"
+        android:layout_width="wrap_content"
+        android:layout_height="227dp"
+        android:layout_gravity="center"
+        android:background="#4D4D4C"
+        android:contentDescription="Imagem da Placa"
+        app:srcCompat="@drawable/img1" />
+
+    <!-- Alternativas (Botões) -->
+    <TextView
+        android:id="@+id/txtPergunta"
+        android:layout_width="379dp"
+        android:layout_height="33dp"
+        android:background="#FDD000"
+        android:gravity="center"
+        android:text="Qual o significado desta placa?"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:id="@+id/rgAlternativas"
+        android:layout_width="379dp"
+        android:layout_height="255dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#979797"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rbAlt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alternativa 1"/>
+
+        <RadioButton
+            android:id="@+id/rbAlt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alternativa 2" />
+
+        <RadioButton
+            android:id="@+id/rbAlt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alternativa 3" />
+
+        <RadioButton
+            android:id="@+id/rbAlt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alternativa 4" />
+    </RadioGroup>
+
+    <!-- Botão Responder -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnResponder"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#EBFFFFFF"
+        android:enabled="false"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Responder" />
+
+    <!-- Botão Sair -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSair"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#4D4D4C"
+        android:gravity="center"
+        android:onClick="Sair"
+        android:padding="15dp"
+        android:text="Sair" />
+
+</LinearLayout>
